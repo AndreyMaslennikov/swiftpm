@@ -23,7 +23,7 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "IPInfoExample",
-            dependencies: ["Alamofire", "SwiftyJSON", "vapor"]),
+            dependencies: ["Alamofire", "SwiftyJSON", "Vapor"]),
         .testTarget(
             name: "IPInfoExampleTests",
             dependencies: ["IPInfoExample"]),
