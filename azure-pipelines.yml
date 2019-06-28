@@ -7,8 +7,7 @@ trigger:
 - master
 
 
-pool:
-  vmImage: 'Hosted macOS'
+pool: 'Hosted macOS'
 
 steps:
 - script: cd IPInfoExample && swift build
