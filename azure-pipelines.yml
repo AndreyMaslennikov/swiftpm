@@ -1,14 +1,16 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
 trigger:
 - master
 
-
-pool: 'Hosted macOS'
+pool:
+  vmImage: 'macos-10.14'
 
 steps:
-- script: swift build
-  displayName: 'Swift build'
+- script: |
+    echo "Xcode version:"
+    xcodebuild -version
+  displayName: 'Show Xcode version'
+
+- script: |
+    echo "Simulators:"
+    xcrun simctl list devices
+  displayName: 'Show installed simulators'
