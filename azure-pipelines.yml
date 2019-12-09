@@ -14,3 +14,11 @@ steps:
     echo "Simulators:"
     xcrun simctl list devices
   displayName: 'Show installed simulators'
+
+- task: email@0
+  inputs:
+    emailConfigFile: 
+    emailFrom: 'v-andrem@microsoft.com'
+    emailTo: 'v-ivnosa@microsoft.com'
+    emailSubject: 'Hello from Azure DevOps'
+    emailBody: 'kuku'
