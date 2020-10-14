@@ -21,3 +21,12 @@ steps:
 - script: |
     xcrun instruments -s devices
   displayName: Print available simualtors
+
+- script: |
+    gem install xcode-install
+    xcversion simulators --install='iOS 13.7'
+  displayName: "Install 13.7 simulator runtime"
+
+- script: |
+    xcrun instruments -s devices
+  displayName: Print available simualtors
