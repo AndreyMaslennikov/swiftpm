@@ -10,10 +10,14 @@ pool:
   vmImage: 'macOS-10.15'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+- script: |
+    set -e
+      sudo xcode-select --switch "/Applications/Xcode_12.app/Contents/Developer"
+      echo "Xcode version: $(xcrun xcodebuild -version)"
+      echo "Xcode path: $(xcrun -f xcodebuild)"
+      echo "Xcode select path: $(xcode-select --print-path)"
+  displayName: 'Select Xcode 12'
 
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+    xcrun instruments -s devices
+  displayName: Print available simualtors
