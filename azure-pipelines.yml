@@ -16,5 +16,9 @@ steps:
   displayName: 'Show installed simulators'
 
 - script: |
+    sudo xcode-select /Applications/Xcode_12.app
+  displayName: 'Select Xcode 12'
+
+- script: |
     ls -alt /Applications
   displayName: "Show Applications folder contents"
