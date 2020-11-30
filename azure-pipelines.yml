@@ -16,8 +16,12 @@ steps:
   displayName: 'Show installed simulators'
 
 - script: |
-    sudo xcode-select /Applications/Xcode_12.app
+    sudo xcode-select -s /Applications/Xcode_12.app
   displayName: 'Select Xcode 12'
+
+- script: |
+    xcrun xcodebuild -version
+  displayName: "Print Xcode version"
 
 - script: |
     ls -alt /Applications
