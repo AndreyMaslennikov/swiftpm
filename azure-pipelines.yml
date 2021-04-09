@@ -6,6 +6,10 @@ pool:
 
 steps:
 - script: |
+    printenv
+  displayName: print env
+
+- script: |
     echo "Xcode version:"
     xcodebuild -version
   displayName: 'Show Xcode version'
