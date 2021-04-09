@@ -8,12 +8,14 @@ steps:
 - script: |
     echo "which mono:"
     which mono
-    echo ===========================
-    echo "ls -alt /usr/bin | grep mono"
-    ls -alt /usr/bin | grep mono
-    echo =======================
-    echo "ls -alt /usr/local/bin | grep mono"
-    ls -alt /usr/local/bin | grep mono
+
+    mono --version
+    # echo ===========================
+    # echo "ls -alt /usr/bin | grep mono"
+    # ls -alt /usr/bin | grep mono
+    # echo =======================
+    # echo "ls -alt /usr/local/bin | grep mono"
+    # ls -alt /usr/local/bin | grep mono
   displayName: playing with mono
 
 - script: |
